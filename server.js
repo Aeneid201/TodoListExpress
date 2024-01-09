@@ -34,6 +34,24 @@ app.post('/addTodo', (request, response)=> {
     .catch(err => console.error(err))
 })
 
+app.put('/updateTodo', (request, response) => {
+    db.collection('todos').updateOne({task: 'walk the dog'},
+    {
+        $set: {
+            task: 'walk the cat'
+        }
+    },
+    {
+        upsert: true
+    }
+    )
+    .then(result => {
+        console.log('Task updated')
+        response.json('Task updated')
+    })
+    .catch(err => console.error(err))
+})
+
 app.delete('/deleteTodo', (request, response) => {
     db.collection('todos').deleteOne({task: request.body.task})
     .then(result => {

@@ -5,33 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Express Todo List</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-
   <div class="todos">
     <h1>To do List</h1>
-    <ul>
-      <% todos.map(todo => { %>
-      <li><%= todo['task'] %><span class='fa fa-trash'></span></li>
-      <% }) %>
-    </ul>
+    <a href="/todos" class="default">Todo items</a>
   </div>
-
-
-  <h2>Add a task</h2>
-
-  <form action="addTodo" method="post">
-    <input type="text" name="task" placeholder="Add Task">
-    <button type="submit" id="addTask">Submit</button>
-  </form>
-
-  <button id="updateTodo">Update Todo</button>
-
-  <script src="script.js"></script>
 </body>
 
 </html>

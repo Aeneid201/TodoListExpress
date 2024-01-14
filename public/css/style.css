@@ -1,0 +1,28 @@
+body {
+  background-color: #141414;
+  font-size: 18px;
+  color: #fff;
+}
+
+.default {
+  background: #588157;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  min-width: 120px;
+  transition: 0.4s all ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.default:hover {
+  background: #1d3557;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+.not {
+  text-decoration: underline;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <section>
+    <h1>Tasks</h1>
+    <ul>
+      <% todos.map(el => { %>
+      <li data-id="<%= el._id %>">
+        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.task %></span>
+        <span class='del'> Delete </span>
+      </li>
+      <% }) %>
+    </ul>
+
+    <h2>Add a task</h2>
+    <form action="/todos/createTodo" method="post">
+      <input type="text" name="task" placeholder="Add Task">
+      <button type="submit" id="addTask">Submit</button>
+    </form>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
